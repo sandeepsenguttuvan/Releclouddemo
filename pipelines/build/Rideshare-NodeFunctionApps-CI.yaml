@@ -1,7 +1,7 @@
 resources:
 - repo: self
 queue:
-  name: ubuntu-latest
+  name: Hosted Linux Preview
   demands: npm
 
 steps:
