@@ -1,6 +1,6 @@
 
-trigger:
-- master
+resources:
+  - repo: self
 
 pool:
   vmImage: 'windows-latest'
