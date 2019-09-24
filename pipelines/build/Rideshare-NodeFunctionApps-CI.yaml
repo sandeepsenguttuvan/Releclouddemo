@@ -1,9 +1,9 @@
-resources:
-- repo: self
-queue:
-  name: ubuntu-16.04
-  demands: npm
+trigger:
+- master
 
+pool:
+  vmImage: 'windows-latest'
+  
 steps:
 - task: Npm@1
   displayName: 'npm install'
