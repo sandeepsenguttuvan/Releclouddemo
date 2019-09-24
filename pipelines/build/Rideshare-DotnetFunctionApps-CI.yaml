@@ -1,13 +1,17 @@
-resources:
-  - repo: self
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
 variables:
   restoreBuildProjects: |
     **/*.csproj
     !**/*Test*.csproj
   testProjects: '**/*Test*/*.csproj'
   buildConfiguration: 'Release'
-queue:
-  name: Hosted Linux Preview
+
 steps:
   - task: DotNetCoreCLI@2
     displayName: Restore
